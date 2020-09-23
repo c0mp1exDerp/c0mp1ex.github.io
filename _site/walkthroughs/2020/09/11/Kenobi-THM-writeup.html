@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>TryHackMe (THM) Kenobi Writeup</title>
+  <meta name="description" content="This is my first writeup! Hope you enjoy">
+  
+  <meta name="author" content="c0mp1ex">
+  <meta name="copyright" content="&copy; c0mp1ex 2020">
+  
+
+  <!-- External libraries -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/monokai-sublime.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css">
+
+  <!-- Favicon and other icons (made with http://www.favicon-generator.org/) -->
+  <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  
+  <!-- Facebook OGP cards -->
+  <meta property="og:description" content="This is my first writeup! Hope you enjoy" />
+  <meta property="og:url" content="http://localhost:4000/walkthroughs/2020/09/11/Kenobi-THM-writeup.html">
+  <meta property="og:site_name" content="" />
+  <meta property="og:title" content="TryHackMe (THM) Kenobi Writeup" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="http://localhost:4000/assets/images/Kenobi/kenobi-header.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="612" />
+  <meta property="og:image:height" content="605" />
+  
+
+  
+  <!-- Twitter: card tags -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="TryHackMe (THM) Kenobi Writeup">
+  <meta name="twitter:description" content="This is my first writeup! Hope you enjoy">
+  <meta name="twitter:image" content="http://localhost:4000/assets/images/Kenobi/kenobi-header.png">
+  <meta name="twitter:url" content="http://localhost:4000/walkthroughs/2020/09/11/Kenobi-THM-writeup.html">
+  
+
+  
+
+  <!-- Site styles -->
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://localhost:4000/walkthroughs/2020/09/11/Kenobi-THM-writeup.html">
+	<link rel="alternate" type="application/rss+xml" title="" href="http://localhost:4000/feed.xml" />
+	
+	<!-- Tooltips -->
+	<script type="text/javascript">
+		window.tooltips = []
+	</script>
+</head>
+
+
+  <body>
+
+    <header class="navigation" role="banner">
+  <div class="navigation-wrapper">
+    <a href="/" class="logo">
+      
+      <img src="/assets/images/logo.png" alt="">
+      
+    </a>
+    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <nav role="navigation">
+      <ul id="js-navigation-menu" class="navigation-menu show">
+				
+	
+	<li class="nav-link"><a href="/about/">About me</a>
+	
+
+	
+
+	
+
+	
+	<li class="nav-link"><a href="/posts/">Posts</a>
+	
+
+	
+
+	
+
+	
+
+	
+
+
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+        <div class="post">
+
+<div class="post-header-container has-cover" style="background-image: url(/assets/images/Kenobi/kenobi-header.png);">
+  <div class="scrim has-cover">
+    <header class="post-header">
+      <h1 class="title">TryHackMe (THM) Kenobi Writeup</h1>
+      <p class="info">by <strong>c0mp1ex</strong></p>
+    </header>
+  </div>
+</div>
+
+<div class="wrapper">
+
+
+
+<section class="post-meta">
+  <div class="post-date">September 11, 2020</div>
+  <div class="post-categories">
+  in 
+    
+    <a href="/category/Walkthroughs">Walkthroughs</a>
+    
+  
+  </div>
+</section>
+
+<article class="post-content">
+  <p>This is my first writeup! Hope you enjoy</p>
+
+<h1 id="introduction">Introduction</h1>
+
+<hr />
+
+<p><a href="https://tryhackme.com/room/kenobi">Kenobi</a> is an easy rated box with the tags <strong>Samba</strong>, <strong>Path Var Manipulation</strong>, <strong>SUID</strong>, <strong>SMB</strong>. By the looks of the tags, it’s gonna be a pretty straight forward box.</p>
+
+<h1 id="enumeration">Enumeration</h1>
+
+<hr />
+
+<p>First things first, I start off with an <strong>nmap</strong> scan:</p>
+
+<p><img src="/assets/images/Kenobi/nmap-blog-001.png" alt="alt text" /></p>
+
+<p>Right of the bat I seen some interesting things, we have NFS, SMB, HTTP and FTP which had a pretty old version.</p>
+
+<p>After some google research on <code class="highlighter-rouge">ProFTPd 1.3.5</code>, I learned that unauthenticated users can run <code class="highlighter-rouge">SITE CPFR</code> which allowed me to copy the context of any file and paste that data into a newly created file or perexisting one with ` site CPTO`. This vulnerability can lead to sensitive data leaking, This information is important later on for getting user.</p>
+
+<p>Shifting towards <em>samba</em>, I ran <strong>smbmap</strong> and discover a share called anonymous which I had read permissons to.</p>
+
+<p><img src="/assets/images/Kenobi/smbmap-blog-001.png" alt="alt text" /></p>
+
+<p>After connecting with <strong>smbclient</strong> and downloading log.txt and viewing it’s content.
+<img src="/assets/images/Kenobi/smbclient-blog-001.png" alt="alt text" />
+<img src="/assets/images/Kenobi/logfile-blog-001.png" alt="alt text" /></p>
+
+<p>I learned that the user kenobi had an RSA key in his home directory. Pairing this with the <a href="https://www.exploit-db.com/exploits/36742">ProFTPd 1.3.5 file copy exploit</a> I was able to leak the RSA key.</p>
+
+<p>The last part required for user came from the NFS. After I ran  <strong>showmount</strong>  on the NFS system.</p>
+
+<p><img src="/assets/images/Kenobi/showmount-blog-001.png" alt="alt text" /></p>
+
+<p>I made the grand discovery, that it allowed me to mount to the /var directory.</p>
+
+<p>I mount the NFS to my /tmp directory with the following command:
+<code class="highlighter-rouge">mount -t nfs 10.10.237.20:/var /tmp/</code></p>
+
+<p>Next I connected to FTP and moved the RSA key into the /var/tmp directory:</p>
+
+<p><img src="/assets/images/Kenobi/ProFTPd-blog-001.png" alt="alt text" /></p>
+
+<p>And after checking the directory I had an RSA key waiting for me:</p>
+
+<p><img src="/assets/images/Kenobi/id_rsa_proof_blog_001.png" alt="alt text" /></p>
+
+<p>Perfect! after running</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">chmod 4000 id_rsa
+ssh Kenobi@10.10.237.20 -i id_rsa
+</span></code></pre></div></div>
+
+<p><img src="/assets/images/Kenobi/user-blog-001.png" alt="alt text" /></p>
+
+<p>I had my user access!</p>
+
+<h1 id="privilege-escalation">Privilege Escalation</h1>
+
+<hr />
+
+<p>First thing I did after getting user was change my directory to <code class="highlighter-rouge">/dev/shm</code> which is a great place to run enumeration scripts due to the fact that it deletes the data on shutdown/restart. This is very helpful with house cleaning. This happens because <code class="highlighter-rouge">/dev/shm</code> stores it’s data to volatile ram(which deletes it’s content when power is lost to the device), giving us the ability to avoid writing to disk(This makes it harder to detect our operations or any trail left behind). It also commonly doesn’t have linux file premission restrictions for execution, allowing us to make a file and give it execution permissons.</p>
+
+<p>I downloaded my trusty linpeas script from the <a href="https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite">privilege-escalation-awesome-scripts-suite</a>, gave it execution permissions and ran it. After 2 minutes I went over the output and noticed an interesting binary with a root SUID. The SUID(Set-userID) allows a file to be executed as a specific user(in this case root) no matter who executes it.</p>
+
+<p><img src="/assets/images/Kenobi/linpeas-blog-001.png" alt="alt text" /></p>
+
+<p>I started to play around with the binary in question and after some light digging it’s clear the program is calling binaries such as <em>curl</em> and <em>ifconfig</em>.</p>
+
+<p><img src="/assets/images/Kenobi/menu-binary-blog-001.png" alt="alt text" /></p>
+
+<p>Running <strong>strings</strong> on <code class="highlighter-rouge">/usr/bin/menu</code> confrimed the issue. <em>Curl</em>, <em>ifconfig</em> and <em>uname</em> are being called without an absolute path</p>
+
+<p><img src="/assets/images/Kenobi/menu-binary-research-blog-001.png" alt="alt text" />
+I chose to abuse <strong>ifconfig</strong> unstated path. I started by creating a file called <em>ifconfig</em> and gave it the contents of <code class="highlighter-rouge">/bin/bash</code>. After that I gave it execution permissions and changed the $PATH env variable so it would execute <code class="highlighter-rouge">/dev/shm/ifconfig</code> instead of the real one <code class="highlighter-rouge">/usr/bin/ifconfig</code>.</p>
+
+<p>Then I called <code class="highlighter-rouge">/usr/bin/menu</code> and chose the ifconfig option which checked the modified <strong>PATH</strong> env variable and called <code class="highlighter-rouge">/dev/shm/ifconfig</code> instead of <code class="highlighter-rouge">/usr/bin/ifconfig</code> giving me a root bash shell.</p>
+
+<p><img src="/assets/images/Kenobi/path-hijacking-blog-001.png" alt="alt text" /></p>
+
+<p>Thanks for reading!</p>
+
+</article>
+
+
+
+
+
+
+  
+</section>
+
+
+
+
+</div>
+</div>
+
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading"></h3>
+
+    <div class="site-navigation">
+
+      <p><strong>Site Map</strong></p>
+      <ul class="pages">
+				
+	
+	<li class="nav-link"><a href="/about/">About me</a>
+	
+
+	
+
+	
+
+	
+	<li class="nav-link"><a href="/posts/">Posts</a>
+	
+
+	
+
+	
+
+	
+
+	
+
+
+      </ul>
+    </div>
+
+    <div class="site-contact">
+
+      <p><strong>Contact</strong></p>
+      <ul class="social-media-list">
+        <li>
+          <a href="mailto:NoEmail@gmail.com">
+            <i class="fa fa-envelope-o"></i>
+            <span class="username">NoEmail@gmail.com</span>
+          </a>
+        </li>
+
+        
+
+      </ul>
+    </div>
+
+    <div class="site-signature">
+      <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+      <p class="text"></p>
+    </div>
+
+  </div>
+
+</footer>
+
+<!-- Scripts -->
+<script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js"></script>
+<script src="//unpkg.com/popper.js@1"></script>
+<script src="//unpkg.com/tippy.js@5"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  // Default syntax highlighting
+  hljs.initHighlightingOnLoad();
+
+  // Header
+  var menuToggle = $('#js-mobile-menu').unbind();
+  $('#js-navigation-menu').removeClass("show");
+  menuToggle.on('click', function(e) {
+    e.preventDefault();
+    $('#js-navigation-menu').slideToggle(function(){
+      if($('#js-navigation-menu').is(':hidden')) {
+        $('#js-navigation-menu').removeAttr('style');
+      }
+    });
+  });
+
+	// Enable tooltips via Tippy.js
+	if (Array.isArray(window.tooltips)) {
+		window.tooltips.forEach(function(tooltip) {
+			var selector = tooltip[0];
+			var config = tooltip[1];
+			tippy(selector, config);
+		})
+	}
+});
+
+</script>
+
+
+
+
+
+
+  </body>
+
+</html>

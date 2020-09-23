@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title></title>
+    <description></description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Wed, 23 Sep 2020 16:19:13 -0600</pubDate>
+    <lastBuildDate>Wed, 23 Sep 2020 16:19:13 -0600</lastBuildDate>
+    <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>TryHackMe (THM) Kenobi Writeup</title>
+        <description>&lt;p&gt;This is my first writeup! Hope you enjoy&lt;/p&gt; &lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt; &lt;hr /&gt; &lt;p&gt;&lt;a href=&quot;https://tryhackme.com/room/kenobi&quot;&gt;Kenobi&lt;/a&gt; is an easy rated box with the tags &lt;strong&gt;Samba&lt;/strong&gt;, &lt;strong&gt;Path Var Manipulation&lt;/strong&gt;, &lt;strong&gt;SUID&lt;/strong&gt;, &lt;strong&gt;SMB&lt;/strong&gt;. By the...</description>
+        <pubDate>Fri, 11 Sep 2020 22:43:59 -0600</pubDate>
+        <link>http://localhost:4000/walkthroughs/2020/09/11/Kenobi-THM-writeup.html</link>
+        <guid isPermaLink="true">http://localhost:4000/walkthroughs/2020/09/11/Kenobi-THM-writeup.html</guid>
+        
+        
+        <category>Walkthroughs</category>
+        
+      </item>
+    
+  </channel>
+</rss>

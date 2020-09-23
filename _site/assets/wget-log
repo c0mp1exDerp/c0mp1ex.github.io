@@ -1,0 +1,16 @@
+--2020-09-12 23:25:59--  https://www.google.com/imgres?imgurl=https%3A%2F%2Fpreviews.123rf.com%2Fimages%2Ftshum%2Ftshum1905%2Ftshum190500089%2F124641434-banner-3-1-winter-landscape-winter-road-and-trees-covered-with-snow-sky-and-sunlight-through-the-fro.jpg
+Resolving www.google.com (www.google.com)... 2607:f8b0:400a:804::2004, 216.58.217.36
+Connecting to www.google.com (www.google.com)|2607:f8b0:400a:804::2004|:443... failed: Connection timed out.
+Connecting to www.google.com (www.google.com)|216.58.217.36|:443... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://www.google.com/imghp [following]
+--2020-09-12 23:28:10--  https://www.google.com/imghp
+Reusing existing connection to www.google.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘imgres?imgurl=https:%2F%2Fpreviews.123rf.com%2Fimages%2Ftshum%2Ftshum1905%2Ftshum190500089%2F124641434-banner-3-1-winter-landscape-winter-road-and-trees-covered-with-snow-sky-and-sunlight-through-the-fro.jpg’
+
+                         imgres?imgurl=https:%2F%     [<=>                                                                                                           ]       0  --.-KB/s               imgres?imgurl=https:%2F%2Fpreviews.123rf.com%2Fim     [ <=>                                                                                                          ]  11.46K  --.-KB/s    in 0.002s  
+
+2020-09-12 23:28:10 (4.80 MB/s) - ‘imgres?imgurl=https:%2F%2Fpreviews.123rf.com%2Fimages%2Ftshum%2Ftshum1905%2Ftshum190500089%2F124641434-banner-3-1-winter-landscape-winter-road-and-trees-covered-with-snow-sky-and-sunlight-through-the-fro.jpg’ saved [11739]
+
