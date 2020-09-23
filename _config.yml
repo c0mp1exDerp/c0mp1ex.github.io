@@ -18,7 +18,7 @@ description: >
 
 
 baseurl: "/" # the subpath of your site, e.g. /blog/
-url: "https://c0mp1exderp.github.io/" # the base hostname & protocol for your site
+url: "https://c0mp1exderp.github.io" # the base hostname & protocol for your site
 cover: "/assets/images/pexels-photo-773594.jpeg "
 logo: "/assets/images/logo.png"
 
